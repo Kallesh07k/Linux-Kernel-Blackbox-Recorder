@@ -259,40 +259,6 @@ IRQ DELTA keyboard=12 network=25 disk=8
 
 ---
 
-## API Endpoints
-
-### Get All Events
-
-```http
-GET /api/events
-```
-
-### Get System Statistics
-
-```http
-GET /api/stats
-```
-
-### Live Event Stream
-
-```http
-GET /api/live
-```
-
-### Update Memory Threshold
-
-```http
-POST /api/threshold
-```
-
-### Export Events
-
-```http
-GET /api/export
-```
-
----
-
 ## Operating System Concepts Covered
 
 ### Process Management
@@ -338,17 +304,6 @@ GET /api/export
 * Operating Systems Education
 * Kernel Development Learning
 * Fault Diagnosis and Debugging
-
----
-
-## Future Enhancements
-
-* eBPF Integration
-* Historical Event Storage
-* Advanced Analytics
-* Security Monitoring
-* Multi-System Monitoring
-* Container Monitoring
 
 ---
 
