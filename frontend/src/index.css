@@ -1,0 +1,76 @@
+/* ============================================================
+   BLACKBOX — design tokens
+   Aesthetic: aircraft flight-data recorder / instrument panel.
+   Deep recorder-housing black, amber readouts (the universal
+   "flight recorder" color), phosphor green for live telemetry,
+   and a hazard-stripe red reserved only for critical alerts.
+   ============================================================ */
+
+:root {
+  --color-housing: #0b0d0c;       /* recorder casing black */
+  --color-panel: #14181a;         /* instrument panel surface */
+  --color-panel-raised: #1c2225;  /* slightly raised panel */
+  --color-line: #2a3236;          /* hairline dividers */
+  --color-text: #d9e0e0;          /* primary readout text */
+  --color-text-dim: #7d8c8f;      /* secondary / labels */
+  --color-amber: #ffb000;         /* primary telemetry amber */
+  --color-green: #5ee08c;         /* live / nominal phosphor green */
+  --color-red: #ff4d4d;           /* critical alert hazard red */
+  --color-yellow: #ffd83d;        /* warning */
+  --color-blue: #6fb7ff;          /* network / disk accent */
+
+  --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --radius: 3px;
+  --gap: 16px;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-housing);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-amber);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-housing);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: var(--radius);
+}
+
+button, input {
+  font-family: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
